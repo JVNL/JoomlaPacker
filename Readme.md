@@ -1,6 +1,5 @@
 # Joomla packer
-
-Joomla is a registered trademark of Open Source Matters, Inc. in the U.S. and/or other countries. Joomla packer is not affiliated with or endorsed by Open Source Matters, Inc. 
+[![Build status](https://ci.appveyor.com/api/projects/status/74f5qbe61kpa393k/branch/master?svg=true)](https://ci.appveyor.com/project/dutchwaters/joomlapacker/branch/master)
 
 Joomla packer is created by Joomla!NL (https://www.joomlanl.nl/) for creating a Dutch Joomla distribution package. It is created in mind with changing dependencies, so the workflow of the application is change able and expandable from the user interface. 
 
@@ -48,3 +47,6 @@ Zip - sourceFolder|saveAsFile
 
 Unzip - zipFile|destinationFolder
 
+
+---
+*Joomla is a registered trademark of Open Source Matters, Inc. in the U.S. and/or other countries. Joomla packer is not affiliated with or endorsed by Open Source Matters, Inc.*
