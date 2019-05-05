@@ -1,0 +1,40 @@
+{
+	"Variables": [
+		{
+			"Var": "%JOOMLA_VERSIE%",
+			"Value": "3.9.5"
+		},
+		{
+			"Var": "%JOOMLA_VERSIE_URL%",
+			"Value": "3-9-5"
+		},
+		{
+			"Var": "%TAAL_SAMPLE_HEAD%",
+			"Value": "INSTL_SAMPLE_DATA_NL_SET=\"Standaard Nederlandse voorbeelddata\""
+		},
+		{
+			"Var": "%TAAL_SAMPLE_DESC%",
+			"Value": "INSTL_SAMPLE_DATA_NL_SET_DESC=\"Installeer Joomla met een pagina(een menu met een link) en modules zoals Nieuwste artikel, Inlogformulier.(Nederlands)\""
+		},
+		{
+			"Var": "%OUTPUT_ZIP%",
+			"Value": "Joomla_%JOOMLA_VERSIE%-Stable-Full_Package_Dutch.zip"
+		},
+		{
+			"Var": "%DATUM%",
+			"Value": "Mei 2019"
+		},
+		{
+			"Var": "%JOOMLA_URL%",
+			"Value": "https://downloads.joomla.org/cms/joomla3/%JOOMLA_VERSIE_URL%/Joomla_%JOOMLA_VERSIE_URL%-Stable-Full_Package.zip?format=zip"
+		},
+		{
+			"Var": "%TAALBESTANDEN_URL%",
+			"Value": "https://crowdin.com/backend/download/project/joomla-cms/nl.zip"
+		},
+		{
+			"Var": "%SQL_URL%",
+			"Value": "http://github.com/JVNL/JoomlaSqlData/archive/master.zip"
+		}
+	]
+}

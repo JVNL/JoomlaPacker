@@ -1,0 +1,72 @@
+{
+	"WorkflowItems": [
+		{
+			"Action": 60,
+			"Arguments": "tijdelijk"
+		},
+		{
+			"Action": 50,
+			"Arguments": "%JOOMLA_URL%|tijdelijk/joomla.zip"
+		},
+		{
+			"Action": 110,
+			"Arguments": "tijdelijk/joomla.zip|tijdelijk/joomla"
+		},
+		{
+			"Action": 50,
+			"Arguments": "%SQL_URL%|tijdelijk/sql.zip"
+		},
+		{
+			"Action": 110,
+			"Arguments": "tijdelijk/sql.zip|tijdelijk/sql"
+		},
+		{
+			"Action": 50,
+			"Arguments": "%TAALBESTANDEN_URL%|tijdelijk/taal.zip"
+		},
+		{
+			"Action": 110,
+			"Arguments": "tijdelijk/taal.zip|tijdelijk/taal"
+		},
+		{
+			"Action": 70,
+			"Arguments": "tijdelijk/taal/staging|tijdelijk/joomla"
+		},
+		{
+			"Action": 40,
+			"Arguments": "tijdelijk/joomla/pkg_nl-NL.xml"
+		},
+		{
+			"Action": 10,
+			"Arguments": "tijdelijk/taal/staging/pkg_nl-NL.xml|tijdelijk/joomla/administrator/manifests/packages/pkg_nl-NL.xml"
+		},
+		{
+			"Action": 40,
+			"Arguments": "tijdelijk/joomla/installation/localise.xml"
+		},
+		{
+			"Action": 20,
+			"Arguments": "[VERSIE;%JOOMLA_VERSIE%]|tijdelijk/sql/JoomlaSqlData-master/localise.xml|tijdelijk/joomla/installation/localise.xml"
+		},
+		{
+			"Action": 20,
+			"Arguments": "[VERSIE;%JOOMLA_VERSIE%][DATUM;%DATUM%]|tijdelijk/sql/JoomlaSqlData-master/sql/mysql/localise.sql|tijdelijk/joomla/installation/sql/mysql/localise.sql"
+		},
+		{
+			"Action": 30,
+			"Arguments": "%TAAL_SAMPLE_HEAD%|tijdelijk/joomla/installation/language/nl-NL/nl-NL.ini"
+		},
+		{
+			"Action": 30,
+			"Arguments": "%TAAL_SAMPLE_DESC%|tijdelijk/joomla/installation/language/nl-NL/nl-NL.ini"
+		},
+		{
+			"Action": 100,
+			"Arguments": "tijdelijk/joomla|%OUTPUT_ZIP%"
+		},
+		{
+			"Action": 80,
+			"Arguments": "tijdelijk"
+		}
+	]
+}
