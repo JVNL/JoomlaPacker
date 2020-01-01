@@ -1,7 +1,7 @@
 # Joomla packer
 [![Build status](https://ci.appveyor.com/api/projects/status/74f5qbe61kpa393k/branch/master?svg=true)](https://ci.appveyor.com/project/dutchwaters/joomlapacker/branch/master)
 
-Joomla packer is created by Joomla!NL (https://www.joomlanl.nl/) for creating a Dutch Joomla distribution package. It is created in mind with changing dependencies, so the workflow of the application is change able and expandable from the user interface. 
+Joomla packer is created by Joomla!NL (https://www.joomlanl.nl/) for creating a Dutch Joomla distribution package. It is created in mind with changing dependencies, so the workflow of the application is changeable and expandable from the user interface. 
 
 ## How to use the workflow editor
 
