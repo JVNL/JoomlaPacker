@@ -17,7 +17,7 @@ namespace JoomlaFunctions
 		}
 
 		/// <summary>
-		/// Ophalen van variables
+		/// Get variables
 		/// </summary>
 		/// <returns></returns>
 		public Variable GetVars(bool getResolved = false)
@@ -34,22 +34,22 @@ namespace JoomlaFunctions
 					var vars = new List<VariableItem>();
 					foreach (var i in temp)
 					{
-						var waarde = i.Value;
-						if (waarde.Contains("%"))
+						var value = i.Value;
+						if (value.Contains("%"))
 						{
 							foreach (var a in temp)
 							{
-								if (waarde.Contains(a.Var))
-									waarde = waarde.Replace(a.Var, a.Value);
+								if (value.Contains(a.Var))
+									value = value.Replace(a.Var, a.Value);
 							}
 						}
-						vars.Add(new VariableItem { Var = i.Var, Value = waarde });
+						vars.Add(new VariableItem { Var = i.Var, Value = value });
 					}
 					return new Variable { Variables = vars };
 				}
 			}
 			else
-				throw new Exception("Kan variables bestand niet vinden!");
+				throw new Exception("Variables file not found!");
 		}
 	}
 }

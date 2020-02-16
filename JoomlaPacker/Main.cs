@@ -25,7 +25,7 @@ namespace JoomlaPacker
 
 			foreach (var item in items)
 			{
-				AddToLog($"Actie: {item.Action}");
+				AddToLog($"Action: {item.Action}");
 				var arguments = item.Arguments;
 				if (arguments.Contains("%"))
 				{
@@ -44,10 +44,10 @@ namespace JoomlaPacker
 
 				AddToLog(string.Empty);
 
-				// Tegen vastlopen op aparte thread uitvoeren, wachten tot gereed.
+				// Run on separate thread, prevent application freeze
 				Task.WaitAll(Task.Run(() => workflowManager.ExecuteWorkflowAction(item.Action, arguments)));
 			}
-			AddToLog("Klaar!");
+			AddToLog("Ready!");
 
 			Cursor = Cursors.Default;
 			btnStart.Enabled = true;

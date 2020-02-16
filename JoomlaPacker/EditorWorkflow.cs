@@ -95,7 +95,7 @@ namespace JoomlaPacker
 				});
 			}
 			new WorkflowManager().SaveWorkflow(new Workflow { WorkflowItems = items });
-			toolStripStatusLabel.Text = "Opgeslagen";
+			toolStripStatusLabel.Text = "Saved";
 		}
 
 		private void DataGrid_Validating(object sender, System.ComponentModel.CancelEventArgs e) => ClearStatus();

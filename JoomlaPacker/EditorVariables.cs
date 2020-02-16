@@ -92,7 +92,7 @@ namespace JoomlaPacker
 				});
 			}
 			new VariableManager().SaveVars(new Variable { Variables = items });
-			toolStripStatusLabel.Text = "Opgeslagen";
+			toolStripStatusLabel.Text = "Saved";
 		}
 
 		private void DataGrid_Validating(object sender, System.ComponentModel.CancelEventArgs e) => ClearStatus();

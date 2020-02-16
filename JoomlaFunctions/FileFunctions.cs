@@ -10,13 +10,13 @@ namespace JoomlaFunctions
 		public static void CopyFile(string source, string target)
 		{
 			if (string.IsNullOrWhiteSpace(source))
-				throw new ArgumentException("Bron bestand mag niet leeg zijn.", nameof(source));
+				throw new ArgumentException("Source file could not be empty.", nameof(source));
 
 			if (string.IsNullOrWhiteSpace(target))
-				throw new ArgumentNullException("Doel bestand mag niet leeg zijn.", nameof(target));
+				throw new ArgumentNullException("Target file could not be empty.", nameof(target));
 
 			if (!File.Exists(source))
-				throw new Exception($"Het te kopieren bron bestand bestaat niet: {source}");
+				throw new Exception($"Source file does not exist: {source}");
 
 			if (!File.Exists(target))
 				File.WriteAllText(target, string.Empty);
@@ -28,13 +28,13 @@ namespace JoomlaFunctions
 		public static void AppendToTextFile(string path, string text)
 		{
 			if (string.IsNullOrWhiteSpace(path))
-				throw new ArgumentException("Pad naar bestand mag niet leeg zijn.", nameof(path));
+				throw new ArgumentException("Path to file could not be empty.", nameof(path));
 
 			if (string.IsNullOrWhiteSpace(text))
-				throw new ArgumentException("Toe te voegen tekst mag niet leeg zijn.", nameof(text));
+				throw new ArgumentException("Text to add could not be empty.", nameof(text));
 
 			if (!File.Exists(path))
-				throw new Exception($"Doel bestand bestaat niet: {path}");
+				throw new Exception($"Target file does not exist: {path}");
 
 			using (var w = File.AppendText(path))
 			{
@@ -67,7 +67,7 @@ namespace JoomlaFunctions
 					{
 						var items = match.Groups[1].Value.Split(';');
 						if (items.Length != 2)
-							throw new Exception($"Item bevatte niet 2 resultaten gescheiden door een puntkomma: [{match.Value}]");
+							throw new Exception($"Item does not contain two values separated by semicolon: [{match.Value}]");
 						input = input.Replace(items[0], items[1]);
 					}
 				}

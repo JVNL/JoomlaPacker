@@ -15,7 +15,7 @@ namespace JoomlaFunctions
 		}
 
 		/// <summary>
-		/// Ophalen van workflow
+		/// Get the workflow
 		/// </summary>
 		/// <returns></returns>
 		public Workflow GetWorkflow()
@@ -26,11 +26,11 @@ namespace JoomlaFunctions
 				return JsonConvert.DeserializeObject<Workflow>(fileData);
 			}
 			else
-				throw new Exception("Kan workflow bestand niet vinden!");
+				throw new Exception("Workflow file not found!");
 		}
 
 		/// <summary>
-		/// Uitvoeren van de workflow acties
+		/// Execute actions of the workflow
 		/// </summary>
 		/// <param name="action"></param>
 		/// <param name="arguments"></param>
@@ -38,7 +38,7 @@ namespace JoomlaFunctions
 		{
 			// Check params
 			if (string.IsNullOrWhiteSpace(arguments))
-				throw new ArgumentException("Geen gevuld element voor: ", nameof(arguments));
+				throw new ArgumentException("No filled element for: ", nameof(arguments));
 
 			var args = SplitArguments(arguments);
 			var aantalArgs = args.Length;
@@ -116,17 +116,17 @@ namespace JoomlaFunctions
 					FileFunctions.DownloadFile(args[0], args[1]);
 					break;
 				default:
-					// Geen actie uitvoeren
+					// No action
 					break;
 			}
 		}
 
 		/// <summary>
-		/// Maak exception voor ongeldige regel.
+		/// Create exception for incorrect argument
 		/// </summary>
 		/// <param name="count"></param>
 		/// <param name="arguments"></param>
-		private void ArgumentIncorrect(int count, string arguments) => throw new Exception($"{count} argument{(count > 1 ? "en" : string.Empty)} verwacht, gekregen: '{arguments}'");
+		private void ArgumentIncorrect(int count, string arguments) => throw new Exception($"{count} argument{(count > 1 ? "s" : string.Empty)} expected, given: '{arguments}'");
 
 		/// <summary>
 		/// Splitsen van args.
@@ -139,7 +139,7 @@ namespace JoomlaFunctions
 			foreach (var item in splitted)
 			{
 				if (string.IsNullOrWhiteSpace(item))
-					throw new ArgumentException($"Leeg argument gevonden in: '{arguments}'");
+					throw new ArgumentException($"Found empty argument in: '{arguments}'");
 			}
 			return splitted;
 		}

@@ -9,7 +9,7 @@ namespace JoomlaFunctions
 		public static void Unzip(string zip, string unzipPath)
 		{
 			if (!File.Exists(zip))
-				throw new Exception($"Bestand niet gevonden: {zip}");
+				throw new Exception($"File not found: {zip}");
 			try
 			{
 				ZipFile.ExtractToDirectory(zip, unzipPath);
@@ -23,7 +23,7 @@ namespace JoomlaFunctions
 		public static void Zip(string source, string zip)
 		{
 			if (!Directory.Exists(source))
-				throw new Exception($"Map niet gevonden: {source}");
+				throw new Exception($"Folder not found: {source}");
 			FileFunctions.RemoveFile(zip);
 			try
 			{
