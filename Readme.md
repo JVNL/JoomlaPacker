@@ -3,7 +3,7 @@
 
 Joomla packer is created by Joomla!NL (https://www.joomlanl.nl/) for creating a Dutch Joomla distribution package. It is created in mind with changing dependencies, so the workflow of the application is changeable and expandable from the user interface. 
 
-
+<br>
 
 ## How to use the workflow editor
 
@@ -13,7 +13,7 @@ The editor works with rows, and starts at the top ends at the bottom. You can ch
 
 ![workflow editor](resources/workflowEditor.png)
 
-
+<br>
 
 ## What are the expected arguments
 
@@ -23,14 +23,18 @@ EditFile - \[Foo;Bar\]\[Test;123\]|test.txt
 
 In test.txt, Foo will be replaced with Bar and Test will be replaced with 123.
 
+<br>
 
+<br>
 
-
+<br>
 
 **Expected are the following:**  
 
 - CopyFile - sourceFile|destinationFile
+
 - EditFile - [searchWordOrSentence;replaceWith]|editFile
+
 - EditFile - [searchWordOrSentence;replaceWith]|editFile|saveAsFile
 
 - AppendToFile - text|editFile
@@ -51,7 +55,9 @@ In test.txt, Foo will be replaced with Bar and Test will be replaced with 123.
 
 - Unzip - zipFile|destinationFolder
 
+<br>
 
+<br>
 
 ---
 *Joomla is a registered trademark of Open Source Matters, Inc. in the U.S. and/or other countries. Joomla packer is not affiliated with or endorsed by Open Source Matters, Inc.*
